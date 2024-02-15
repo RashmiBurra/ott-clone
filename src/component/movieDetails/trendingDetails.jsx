@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import { AllTrendingDetails, api, key } from '../../redux/ActionCreators/actionCreators';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import {PlayCircleFilled } from "@ant-design/icons";
 import './movieDetails.css'
 function TrendingDetails() {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ function TrendingDetails() {
                 <h5 id="language">{original_language}</h5>
                 <p id="descrption">{overview}</p>
                 <button id="aired" style={{backgroundColor:"#33373d",border:"none",width:"50px",height:"30px"}}> {release_date && release_date.split('-')[0]}</button>
+                <Link to="/playnow"><div style={{fontSize:"2rem",cursor:"pointer",}}><PlayCircleFilled /></div></Link>
                 
             </div>
             <div id="poster"  style={{flex:"1" }}>

@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { AllTopratedDetails,api,key } from '../../redux/ActionCreators/actionCreators';
 import './movieDetails.css'
+import {PlayCircleFilled } from "@ant-design/icons";
 
 function TopratedDetails() {
     const dispatch=useDispatch();
@@ -42,6 +43,7 @@ const getTopDetails=async ()=>{
                 <p id="descrption">{overview}</p>
                 <button id="aired" style={{backgroundColor:"#33373d",border:"none",height:"30px",padding:"5px"}}>{first_air_date}</button><br/><br/>
                 <button id="aired" style={{backgroundColor:"#33373d",border:"none",height:"30px",padding:"5px"}}>{vote_average}</button>
+                <Link to="/playnow"><div style={{fontSize:"2rem",cursor:"pointer",}}><PlayCircleFilled /></div></Link>
             </div>
             <div id="poster"  style={{flex:"1" }}>
              <img alt={name} style={{ width: '100%' }} src={`https://image.tmdb.org/t/p/w500${backdrop_path}`} />

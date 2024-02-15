@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { AllMovieList, api,key } from '../../redux/ActionCreators/actionCreators';
 import './movieDetails.css';
+import {PlayCircleFilled } from "@ant-design/icons";
 
 function AllMovieDetails() {
     const dispatch=useDispatch();
@@ -40,6 +41,7 @@ const getAllMovieDetails=async ()=>{
                 <h5 id="language">{original_language}</h5>
                 <p id="descrption">{overview}</p>
                 <button id="aired" style={{backgroundColor:"#33373d",border:"none",height:"30px"}}>{release_date}</button>
+                <Link to="/playnow"><div style={{fontSize:"2rem",cursor:"pointer",}}><PlayCircleFilled /></div></Link>
             </div>
             <div id="poster"  style={{flex:"1" }}>
              <img alt={title} style={{ width: '100%' }} src={`https://image.tmdb.org/t/p/w500${backdrop_path}`} />

@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
-import { HeartTwoTone } from "@ant-design/icons";
-import { useParams } from 'react-router-dom';
+import { HeartTwoTone,PlayCircleFilled } from "@ant-design/icons";
+import { Link, useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { AllFavorites, AllWishList, api, key } from '../../redux/ActionCreators/actionCreators';
 import {notification} from 'antd';
@@ -66,7 +66,9 @@ function SearchDetails() {
               ) : (
                 <HeartTwoTone twoToneColor="#fff" style={{ fontSize: "3rem" }} />
               )} </div>
+              <Link to="/playnow"><div style={{fontSize:"2rem",cursor:"pointer",}}><PlayCircleFilled /></div></Link>
           </div>
+          
         </div>
         <div id="poster" style={{ flex: "1" }}>
           <img alt="Movie Poster" style={{ width: '100%' ,height:"50%"}} src={`https://image.tmdb.org/t/p/w500${movieDetails.poster_path}`} />

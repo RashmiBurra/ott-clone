@@ -21,7 +21,7 @@ function Header() {
           <NavLink to="/series" style={{ textDecoration: "none", color: "white" }}> <li>TV</li></NavLink>
           <NavLink to="/wishlist" style={{ textDecoration: "none", color: "white" }}><li>wishlist</li></NavLink>
           <NavLink to="/favorite"  style={{ textDecoration: "none", color: "white" }}><li>favorite</li></NavLink>
-          <Dropdown  style={{}}>
+          <Dropdown >
             <Dropdown.Toggle id="navbarDarkDropdownMenuLink" variant="dark">
               <img style={{ height: "30px", width: "30px", borderRadius: "50%", marginTop: "10px" }} src={UserAvatar} alt="user-avatar" />
             </Dropdown.Toggle>

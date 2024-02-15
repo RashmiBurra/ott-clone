@@ -16,6 +16,7 @@ import Populardetails from '../movieDetails/popular details';
 import TopratedDetails from '../movieDetails/topratedDetails';
 import AllMovieDetails from '../movieDetails/AllMovieDetails';
 import Authentication from '../../authentication/authentication';
+import OriginalWeb from '../movieDetails/originalWeb';
 function AppRouter() {
    
     return (
@@ -33,6 +34,7 @@ function AppRouter() {
                 <Route path="/topratedDetails/:id" element={<ProtectedRoute component={<TopratedDetails />} />} />
                 <Route path="/allmoviedetails/:id" element={<ProtectedRoute component={<AllMovieDetails />} />} />
                 <Route path="/search/:id" element={<ProtectedRoute component={<SearchDetails />} />} />
+                <Route path="/playnow" element={<ProtectedRoute component={<OriginalWeb />} />} />
                 <Route path="/signin" element={<Homepage />} />
             </Routes>
         </AuthProvider>
