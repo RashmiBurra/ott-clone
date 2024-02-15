@@ -1,0 +1,33 @@
+
+*{
+    color: white;
+    margin:0px;
+    padding:0px;
+}
+.bannerImage{
+    width:100%;
+    height:500px;   
+}
+.container-fluid {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+.image-text{
+    position: absolute;
+    top: 100px;
+  left: 100px;
+  
+}
+#rank{
+    font-weight: bolder;
+    font-size: 1rem;
+}
+@media screen and (min-width:320px) and (max-width:1023px){
+  .carouselBanner{
+         width: 1023px;;
+         
+  }
+  }
+
+
