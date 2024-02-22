@@ -33,7 +33,7 @@ function AppRouter() {
                 <Route path="/popularDetails/:id" element={<ProtectedRoute component={<Populardetails />} />} />
                 <Route path="/topratedDetails/:id" element={<ProtectedRoute component={<TopratedDetails />} />} />
                 <Route path="/allmoviedetails/:id" element={<ProtectedRoute component={<AllMovieDetails />} />} />
-                <Route path="/search/:id" element={<ProtectedRoute component={<SearchDetails />} />} />
+                <Route path="/search/:imbdID" element={<ProtectedRoute component={<SearchDetails />} />} />
                 <Route path="/playnow" element={<ProtectedRoute component={<OriginalWeb />} />} />
                 <Route path="/signin" element={<Homepage />} />
             </Routes>

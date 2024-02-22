@@ -50,8 +50,8 @@ function Popular() {
         <div className='popular-container'>
             {storePopular.ott.popularData?.map((e)=>(
             
-                <div className='popular-card'>
-                  <Link key={e.id} to={`/popularDetails/${e.id}`} style={{textDecoration:"none"}}><img style={{ height: "120px", minWidth: "180px", borderRadius: "10px" }} src={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} alt={e.name} />
+                <div className='popular-card'  key={e.id}>
+                  <Link key={e.id} to={`/popularDetails/${e.id}`} style={{textDecoration:"none"}}>{e.backdrop_path?(<img style={{ height: "120px", minWidth: "180px", borderRadius: "10px" }} src={`https://image.tmdb.org/t/p/w500${e.backdrop_path}`} alt={e.name} />):(<img style={{ height: "120px", minWidth: "180px", borderRadius: "10px" }} src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" alt="Placeholder" />)}
                   <p>{e.name}</p></Link>
                 </div>
              

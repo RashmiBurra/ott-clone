@@ -9,9 +9,9 @@ function Search() {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    fetch(`${api}search/movie?query=${search}&${key}`)
-      .then((response) => response.json())
-      .then((value) => setData(value.results));
+    fetch(`${api}search/movie?query=${search}&${key}`).then(
+      response=>response.json()
+    ).then(value=>(setData(value.results)))    
   };
 
   return (

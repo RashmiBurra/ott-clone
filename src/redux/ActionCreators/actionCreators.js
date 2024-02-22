@@ -3,6 +3,7 @@ import {ACTION_TYPES} from '../ActionTypes/actionTypes'
  export const  api=`https://api.themoviedb.org/3/`;
  export const key=`api_key=c934846d370ecddf45905bf4623e1c73`;
 
+
 export const AllmovieAction=(data)=>{
     return {type:ACTION_TYPES.ALLMOVIES,payload:data}
 }

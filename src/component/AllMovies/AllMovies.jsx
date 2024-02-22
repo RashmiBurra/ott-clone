@@ -23,7 +23,7 @@ function AllMovies() {
    <div className='row' style={{backgroundColor:"black"}}>
    {storeMovie.ott.allMovieData?.map((movie)=>( <div className='col col-12 col-md-4 col-sm-4 col-lg-2'>
    <div>
-  <Link key={movie.id} to={`/allmoviedetails/${movie.id}`}  style={{textDecoration:"none"}}><img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} className="card-img-top" alt="image"/>
+  <Link key={movie.id} to={`/allmoviedetails/${movie.id}`}  style={{textDecoration:"none"}}>{movie.backdrop_path?(<img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} className="card-img-top" alt="image"/>):(<img src="https://www.freeiconspng.com/uploads/no-image-icon-6.png" alt="Placeholder" />)}
   <p>{movie.title}</p></Link>
 </div>
 </div>
